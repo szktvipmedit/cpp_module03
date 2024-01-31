@@ -1,15 +1,15 @@
-CPPS =
+CPPS = main.cpp ClapTrap.cpp
 
 OBJS = ${CPPS::.cpp=.o}
 
-NAME =
+NAME = claptrap
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 ${NAME}: ${OBJS}
 	${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
 
-.PHONY all clean fclean re
+.PHONY: all clean fclean re
 
 all: ${NAME};
 
