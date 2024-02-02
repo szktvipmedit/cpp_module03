@@ -8,12 +8,13 @@ class ClapTrap{
         ClapTrap(std::string name);
         ~ClapTrap();
         ClapTrap(const ClapTrap& other);
-        void operator=(const ClapTrap& other);
+        ClapTrap& operator=(const ClapTrap& other);
     
     public:
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
+        
     private:
         std::string name;
         int hitPoints;
