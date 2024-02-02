@@ -1,6 +1,6 @@
 CPPS =
 
-OBJS = ${CPPS::.cpp=.o}
+OBJS = ${CPPS:.cpp=.o}
 
 NAME =
 CXX = c++
