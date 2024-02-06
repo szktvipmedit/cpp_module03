@@ -11,7 +11,8 @@ class ClapTrap{
     public:
         ClapTrap();
         ClapTrap(std::string name);
-        ~ClapTrap();
+        // ~ClapTrap();
+        virtual ~ClapTrap();
         ClapTrap(const ClapTrap& other);
         ClapTrap& operator=(const ClapTrap& other);
     
@@ -21,10 +22,15 @@ class ClapTrap{
         void beRepaired(unsigned int amount);
         void statusConfirm();
 
-    private:
+    //scavtrapをオーバーライドで作成するとき(public virtualを避けるために派生クラスで変えたい場所を別の関数に分けてそれを仮想関数として扱う)
+    // protected:
+    //     virtual void attack_message(const std::string& target);
+
+    protected:
         std::string name;
         int hitPoints;
         int energyPoints;
         int attackDamage;
 };
+
 #endif
